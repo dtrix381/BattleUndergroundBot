@@ -1,3 +1,7 @@
+from server import keep_alive
+
+keep_alive()  # Start Flask keep-alive server
+
 import discord
 from discord import app_commands
 from discord.ext import commands
@@ -11,7 +15,6 @@ from bs4 import BeautifulSoup
 import asyncio
 import os
 from dotenv import load_dotenv
-
 
 # Bot Configuration
 ADMIN_ID = 488015447417946151
@@ -827,3 +830,5 @@ async def on_ready():
 
 load_dotenv()
 TOKEN = os.getenv("DISCORD_BOT_TOKEN")
+
+bot.run(TOKEN)
